@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+  build:
+    commands:
+      - echo "Zipping Lambda function..."
+      - zip -r function.zip .  # Zips all files
+
+artifacts:
+  files:
+    - function.zip
